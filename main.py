@@ -14,9 +14,9 @@ def get_file_content(filePath):
 
 # 验证码识别
 def ocr(yzm_jpg):
-    APP_ID = "11735739"
-    API_KEY = "qcqTH7T3uVpRmQxrTrpTjgSh"
-    SECRET_KEY = "w6MbALfqmZsAtve6XmXqdhUmqGvoqZqt"
+    APP_ID = ""#你的百度APP_ID
+    API_KEY = ""#你的API_KEY
+    SECRET_KEY = ""#你的SECRET_KEY
     client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
     allTexts = ""
     # 图片
