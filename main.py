@@ -90,6 +90,7 @@ class urp:
             rs = bs.select("#vchart")
             # 截全屏
             self.brower.save_screenshot("urp%s.png" % str(self.bh))
+            #下面这个忽略，直接用测得的数据
             # 元素左上角顶点
             xPoint = element.location["x"]
             yPoint = element.location["y"]
@@ -109,7 +110,7 @@ class urp:
                 print("验证码错误")
                 self.status = 3
                 return
-            #####################################################
+        
             zjh_input = self.brower.find_element_by_name("zjh")
             zjh_input.send_keys(self.zjh)
             mm_input = self.brower.find_element_by_name("mm")
@@ -187,6 +188,3 @@ if __name__ == '__main__':
     finally:
         exit(0)
 
-    #以下命令用来直接关闭所有的谷歌驱动
-    # os.system('taskkill /im chromedriver.exe /F')
-    # os.system('taskkill /im chrome.exe /F')
